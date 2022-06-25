@@ -1,0 +1,293 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #1b1c20;
+  overflow: hidden;
+  font-size: 13px;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #deede5;
+  margin: 0 0.5rem;
+  font-size: 2rem;
+}
+
+h1 {
+  text-align: center;
+  color: #deede5;
+  margin: 1rem 0;
+}
+
+h4 {
+  padding: 0.2rem;
+  font-size: 0.8rem;
+  font-weight: normal;
+  opacity: 0.8;
+  color: #deede5;
+  margin: 0.2rem 0;
+  text-align: right;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #deede5;
+  border-radius: 5px;
+  padding: 0.2rem;
+  box-shadow: 0 1px 4px #121221 inset;
+  outline: 2px solid #f0b86c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #233968;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #233968;
+}
+
+button {
+  border: none;
+  color: #fdf9f0;
+  border-radius: 5px;
+  background-color: #29488c;
+  box-shadow: 0px 1px 4px #254133;
+}
+
+.links {
+  padding: 0.5rem;
+  margin: auto 0;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+#logo {
+  display: inline-block;
+  margin: auto 0;
+  margin-left: 0.5rem;
+  font-family: "Nunito";
+  flex-grow: 100;
+}
+
+#logo a {
+  font-size: 1.1rem;
+}
+.links:hover {
+  background-color: #9c886a;
+}
+
+#todo-app {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  width: 85%;
+  max-width: 1000px;
+  height: 67%;
+  background-color: #233968;
+  margin: auto;
+  padding: 1rem;
+  border: 0.1rem solid #7c2156;
+  border-radius: 5px;
+  box-shadow: 0px 1px 4px #505050;
+}
+
+form {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+#textbox {
+  width: auto;
+  height: 1.5rem;
+  margin-right: 1.5%;
+  font-size: 1.2rem;
+  padding: 0.1rem 0.5rem;
+  font-family: "Nunito";
+  flex-grow: 100;
+  border-radius: 5px;
+  border: 0.1rem solid #f0b86c;
+  box-shadow: 0px 1px 4px #122119;
+  color: #122119;
+  background-color: #dee0e9;
+}
+
+#textbox:focus {
+  outline: none;
+}
+
+#add-btn {
+  padding: 0.2rem 0.4rem;
+  font-size: 1rem;
+  border: 0.1rem solid #f06c6c;
+  box-shadow: 0px 1px 4px #122119;
+}
+
+#list {
+  height: 72%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding-top: 0.2rem;
+  padding-inline-start: 0;
+  border: 0.1rem solid #7c2156;
+  background-color: #f5f6f8;
+  box-shadow: 0px 1px 4px #122119 inset;
+}
+
+.list-item {
+  margin: 0.1rem 0.2rem;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+  background-color: #233968;
+}
+
+.list-item:last-child {
+  margin-bottom: 0.3rem;
+}
+
+.task-name {
+  width: 70%;
+  flex-grow: 100;
+  padding: 0.4rem 0.5rem;
+  color: #ffffff;
+  opacity: 0.9;
+  margin-right: 0.4rem;
+  background-color: #5c54d5;
+  border-radius: 5px;
+  box-shadow: 0px 1px 4px #254133;
+  font-family: "Fuzzy Bubbles";
+  overflow: hidden;
+}
+
+.task-name-cont {
+  width: 100%;
+  overflow: hidden;
+  font-size: 0.8rem;
+  text-overflow: ellipsis;
+  line-height: 1.2rem;
+  max-height: 6rem;
+  word-wrap: break-word;
+}
+
+.click-class {
+  max-height: unset;
+  overflow-y: visible;
+}
+
+.checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #deede5;
+  margin: 0.5rem;
+  margin-right: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 1.3px solid #233968;
+  box-shadow: 0px 1px 4px #254133;
+  border-radius: 5px;
+  transform: translateY(0.1rem);
+  display: grid;
+  place-content: center;
+}
+
+.checkbox::before {
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  background-color: #233968;
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.checkbox:checked::before {
+  transform: scale(1);
+}
+
+.checkbox:focus {
+  outline: 0.4px solid #233968;
+  outline-offset: 0;
+}
+
+.delete {
+  width: 2.2rem;
+  height: 1.8rem;
+  margin: auto;
+  background: url(../icons/delete.png);
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #425784;
+  filter: opacity(0.8);
+}
+
+.completed {
+  filter: grayscale(40%);
+}
+
+@media only screen and (max-width: 330px) {
+  html,
+  body {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 250px) {
+  html,
+  body {
+    font-size: 9px;
+  }
+}
+
+@media only screen and (max-height: 550px) {
+  h1 {
+    margin: 0.5rem 0;
+  }
+  #todo-app {
+    height: 60%;
+  }
+  #list {
+    height: 60%;
+  }
+}
+
+@media only screen and (min-height: 700px) {
+  #todo-app {
+    height: 70%;
+    transform: translate(-50%, -53%);
+  }
+}
+
+@media only screen and (min-width: 750px) and (min-height: 750px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  html,
+  body {
+    font-size: 18px;
+  }
+}
