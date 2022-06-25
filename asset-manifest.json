@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/mlukasalaska/TodoList-React/static/css/main.52ee0c44.css",
+    "main.js": "/mlukasalaska/TodoList-React/static/js/main.adea04e1.js",
+    "index.html": "/mlukasalaska/TodoList-React/index.html",
+    "main.52ee0c44.css.map": "/mlukasalaska/TodoList-React/static/css/main.52ee0c44.css.map",
+    "main.adea04e1.js.map": "/mlukasalaska/TodoList-React/static/js/main.adea04e1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.52ee0c44.css",
+    "static/js/main.adea04e1.js"
+  ]
+}
